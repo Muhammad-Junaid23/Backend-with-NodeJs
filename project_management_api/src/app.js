@@ -3,12 +3,10 @@ import cors from "cors";
 
 const app = express();
 
-// basic config
 app.use(express.json({ limit: "15kb" }));
 app.use(express.urlencoded({ extended: "true", limit: "16kb" }));
 app.use(express.static("public"));
 
-// cors config
 app.use(
    cors({
       origin: process.env.CORS_ORIGIN?.split(",") || "https://localhost:5173",
@@ -18,7 +16,6 @@ app.use(
    }),
 );
 
-//import routes
 import healthCheckRouter from "./routes/healthcheck.routes.js";
 import authRouter from "./routes/auth.routes.js";
 
