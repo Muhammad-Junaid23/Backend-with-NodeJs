@@ -1,5 +1,5 @@
-import { ApiError } from "../utils/api-error";
-import { asyncHandler } from "../utils/async-handler";
+import { ApiError } from "../utils/api-error.js";
+import { asyncHandler } from "../utils/async-handler.js";
 
 export const verifyJWT = asyncHandler(async (req, res, next) => {
    const token =
