@@ -7,6 +7,7 @@ import {
    forgotPasswordMailgenContent,
    sendEmail,
 } from "../utils/mail.js";
+import jwt from "jsonwebtoken";
 
 const generateAccessAndRefreshTokens = async (userId) => {
    try {
